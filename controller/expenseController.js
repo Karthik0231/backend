@@ -3,6 +3,7 @@ import Expense from "../models/Expense.js";
 //CRUD->Create, Retrieve, Update, Delete
 export const createExpense = async(req,res)=>{
     try {  
+        console.log('heyee');
         const {title,amount,category} = req.body;
         const newExpense = await Expense.create({
             title:title,
